@@ -12,8 +12,6 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <Header/>
-        <Button outline>Кнопка</Button>
-        <Button>Кнопка</Button>
         <div className="content">
           <div className="container">
             <div className="content__top">
