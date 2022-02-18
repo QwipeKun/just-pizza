@@ -1,6 +1,6 @@
 import React from "react";
 
-import logoSvg from "./Assets/img/pizza-logo.svg";
+import logoSvg from "../Assets/img/pizza-logo.svg";
 import Button from "./Button";
 
 const Header = () => {
