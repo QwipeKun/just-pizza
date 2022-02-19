@@ -15,7 +15,7 @@ function App() {
           <div className="container">
             <div className="content__top">
               <Catigories 
-                onClickItem={(name) => alert(name)}
+                onClickItem={(name) => console.log(name)}
                 items={[
                 'Мясные',
                 'Вегетарианская',
