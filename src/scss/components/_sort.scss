@@ -5,9 +5,17 @@
   &__label {
     display: flex;
     align-items: center;
-
+    @media screen and (max-width: 1273px) {
+      margin-top: 10px;
+    }
     svg {
       margin-right: 8px;
+      transition: 0.2s;
+      transform: rotate(180deg);
+      &.rotated { 
+        transform: rotate(0deg);
+        transition: 0.2s;
+      }
     }
 
     b {
@@ -15,13 +23,17 @@
     }
 
     span {
+      -webkit-user-select: none;
       color: $orange;
       border-bottom: 1px dashed $orange;
       cursor: pointer;
+      &:hover{
+      }
     }
   }
 
   &__popup {
+    -webkit-user-select: none;
     position: absolute;
     right: 0;
     margin-top: 15px;

@@ -31,22 +31,32 @@ import React, { useState } from "react";
 //   }
 // }
 
-function Catigories({ items, onClickItem }) {
-  const [activeItem, setActiveItem] = useState(null)
+function Catigories({ items, onClickItem, allItemsTitle }) {
+  const [activeItem, setActiveItem] = useState(null);
 
   const onSelectItem = (index) => {
-    setActiveItem(index)
-  }
+    setActiveItem(index);
+  };
 
   return (
     <div className="categories">
       <ul>
-        <li className={activeItem === null ? 'active' : ''} onClick= {() => onSelectItem(null)}>Все</li>
-        {items.map((name, index) => (
-          <li className={activeItem === index ? 'active' : ''} onClick={() => onSelectItem(index)} key={`${name}_${index}`}>
-            {name}
-          </li>
-        ))}
+        <li
+          className={activeItem === null ? "active" : ""}
+          onClick={() => onSelectItem(null)}
+        >
+          {allItemsTitle}
+        </li>
+        {items &&
+          items.map((name, index) => (
+            <li
+              className={activeItem === index ? "active" : ""}
+              onClick={() => onSelectItem(index)}
+              key={`${name}_${index}`}
+            >
+              {name}
+            </li>
+          ))}
       </ul>
     </div>
   );
